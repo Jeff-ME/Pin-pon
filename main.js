@@ -128,7 +128,9 @@ function loop() {
  
   }
   
-  context.fillRect(ball.x, ball.y, ball.width, ball.height); //bola
+  context.beginPath();
+  context.arc(ball.x + ball.width / 2, ball.y + ball.width / 2, ball.width / 2, 0, 2 * Math.PI);
+  context.fill();
   context.fillStyle = 'lightgrey';
   context.fillRect(0, 0, canvas.width, grid); //linea de arriba
   context.fillRect(0, canvas.height - grid, canvas.width, canvas.height); //linea de abajo
